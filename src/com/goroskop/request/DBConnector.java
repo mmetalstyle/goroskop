@@ -31,13 +31,13 @@ public class DBConnector {
 		} else {
 			switch (dayIndex) {
 			case 0:
-				setDate("Сегодня: 23 июля 2011");
+				setDate("Сегодня: ");
 				break;
 			case 1:
-				setDate("Вчера: 23 июля 2011");
+				setDate("Вчера: ");
 				break;
 			case 2:
-				setDate("2 дня назад: 23 июля 2011");
+				setDate("2 дня назад:");
 				break;
 			}
 		}

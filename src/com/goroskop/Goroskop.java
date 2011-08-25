@@ -17,19 +17,15 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.goroskop.ContactItem;
+
 public class Goroskop extends ListActivity implements OnClickListener {
-	// final CharSequence[] mChoise = {"Сегодня", "Завтра", "Неделя", "Месяц",
-	// "Ну нахер"};
 	public static int day; // 0 - сегодня, 1 - вчера, 2 - 2 дня назад
 	public static int znakId;
-	public static int znakImgId;
+	public static int znakImgId; 
 
 	final CharSequence[] mChoise = { "Сегодня", "Вчера", "2 дня назад",
 			"Отмена" };
-/*	final int[] znakImgIdArray = { R.drawable.blizn, R.drawable.deva,
-			R.drawable.koza, R.drawable.lev, R.drawable.oven, R.drawable.rak,
-			R.drawable.ribi, R.drawable.skorp, R.drawable.strel,
-			R.drawable.telex, R.drawable.vesi, R.drawable.voda };*/
 	final int[] znakImgIdArray = { R.drawable.scnd_blizn, R.drawable.scnd_devi,
 			R.drawable.scnd_kozerogi, R.drawable.scnd_lvi, R.drawable.scnd_ovni, R.drawable.scnd_raki,
 			R.drawable.scnd_ribi, R.drawable.scnd_skorpioni, R.drawable.scnd_strelci,
