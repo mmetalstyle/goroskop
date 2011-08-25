@@ -1,35 +1,61 @@
 package com.goroskop.request;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.util.Log;
+
 public class DBConnector {
 	private String text;
 	private String date;
 	private int result = 0;
+	private int dayIndex;
+	private int znakZodiakaIndex;
 
 	public DBConnector(int aDayIndex, int aZnakZodiakaIndex) {
-		// TODO Connect to DB...
+		dayIndex = aDayIndex;
+		znakZodiakaIndex = aZnakZodiakaIndex;
 
-		setResult(0); // -1 - error
+		/*
+		 * "Брутальный гороскоп", "today": { "bl": "bl 1", "dv": "dv", "kz":
+		 * "kz", "lv": "lv", "ov": "ov", "rk": "rk", "rb": "rb", "sk": "sk",
+		 * "st": "st", "tl": "tl", "vs": "vs", "vd": "vd", } }
+		 */
+		UrlConnector connector = new UrlConnector(
+				"http://tranceforce.ru/goroskop.php");
+		setResult(getDataFromJSON(connector.getUrlContents()));
 
 		// Set Info
-		if (result == -1)
+		if (result == -1) {
 			return;
-		
-		setText(" Сегодня ваш мозг увеличился, килограмм так на 15, вы умны, сообразительны и красивы. "
-				+ "Как нехуй делать, решаете все самые сложные задачи, "
-				+ "бьете ебальники врагам и конкурентам, завоевываете симпатии противоположного пола."
-				+ "К успеху идете, однозначно!");
-		
-		switch (aDayIndex) {
-		case 0:
-			setDate("Сегодня: 23 июля 2011");
-			break;
-		case 1:
-			setDate("Вчера: 23 июля 2011");
-			break;
-		case 2:
-			setDate("2 дня назад: 23 июля 2011");
-			break;
+		} else {
+			switch (dayIndex) {
+			case 0:
+				setDate("Сегодня: 23 июля 2011");
+				break;
+			case 1:
+				setDate("Вчера: 23 июля 2011");
+				break;
+			case 2:
+				setDate("2 дня назад: 23 июля 2011");
+				break;
+			}
 		}
+	}
+
+	private int getDataFromJSON(String input) {
+		try {
+			JSONObject json = new JSONObject(input);
+			Log.i("REQUEST_DATA", dayIndex + " -- " + znakZodiakaIndex);
+			Log.i("REQUEST_DATA", (String) ((JSONObject) json
+					.get(dayIndex + "")).get(znakZodiakaIndex + ""));
+			setText((String) ((JSONObject) json.get(dayIndex + ""))
+					.get(znakZodiakaIndex + ""));
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return -1;
+		}
+		return 0;
 	}
 
 	public String getText() {
