@@ -27,11 +27,11 @@ public class SecondPage extends Activity implements OnClickListener {
 
 		
 		TextView goroskopInfoText = (TextView) findViewById(R.id.goroskopInfoText);
-		goroskopInfoText.setText("");
+		//goroskopInfoText.setText("");
 		
 		
 		TextView goroskopDateText = (TextView) findViewById(R.id.goroskopDateText);
-		goroskopDateText.setText("");
+		//goroskopDateText.setText("");
 
 		
 		Button buttonReturnToMainPage = (Button) findViewById(R.but.buttonReturnToMainPage);
@@ -49,8 +49,9 @@ public class SecondPage extends Activity implements OnClickListener {
 			showTrollFace();
 		} else {
 			imgZnakZodiaka.setImageResource(Goroskop.znakImgId);
-			goroskopInfoText.setText(dBConnector.getText());
-			goroskopDateText.setText(dBConnector.getDate());
+			////goroskopInfoText.setText(dBConnector.getText());
+			//goroskopDateText.setText(dBConnector.getDate());
+			//goroskopDateText.setText("Стрельцы, сегодня просто красивы, обаятельны и пиздаты впрочем как и всегда! За вами бегают табуны лиц противоположенного пола. Ух, можете загулять мама не горюй.");
 		}
 	}
 

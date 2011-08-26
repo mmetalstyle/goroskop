@@ -3,8 +3,11 @@
 	android:orientation="vertical" android:layout_width="fill_parent"
 	android:layout_height="fill_parent" android:padding="5dp">
 
-	<LinearLayout android:id="@+id/linearLayout1"
-		android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+	<LinearLayout 
+	    android:id="@+id/linearLayout1"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:orientation="vertical">
 
 <!-- 		<TextView android:id="@+id/text3" android:text="Выберите ебучий задиак из галереи..." -->
 <!-- 			android:textSize="15px" android:layout_width="wrap_content" -->
@@ -16,30 +19,46 @@
 <!-- 			android:layout_height="wrap_content"> -->
 <!-- 		</Gallery> -->
 
-		<TextView android:id="@+id/goroskopDateText" android:text="какая-то дата"
-			android:layout_width="wrap_content" android:layout_height="wrap_content"
+		<TextView android:id="@+id/goroskopDateText" 
+		android:text="какая-то дата"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
 			android:textColor="#444">
 		</TextView>
 		
 		<LinearLayout android:id="@+id/linearLayout2"
-			android:layout_height="wrap_content" android:layout_width="fill_parent">
+			android:layout_height="wrap_content" 
+			android:layout_width="wrap_content"
+			>
 
 
 			<TextView android:id="@+id/goroskopInfoText"
-				android:text="Стрельцы, сегодня просто красивы, обаятельны и пиздаты впрочем как и всегда! За вами бегают табуны лиц противоположенного пола. Ух, можете загулять мама не горюй."
-				android:layout_height="wrap_content" android:textColor="#AAA"
-				android:layout_width="80sp" android:layout_weight="1">
+				android:text="Стрельцы, сегодня просто красивы, обаятельны и пиздаты впрочем как и всегда! За вами бегают табуны лиц противоположенного пола. Ух, можете загулять мама не горюй.Стрельцы, сегодня просто красивы, обаятельны и пиздаты впрочем как и всегда! За вами бегают табуны лиц противоположенного пола. Ух, можете загулять мама не горюй.Стрельцы, сегодня просто красивы, обаятельны и пиздаты впрочем как и всегда! За вами бегают табуны лиц противоположенного пола. Ух, можете загулять мама не горюй.Стрельцы, сегодня просто красивы, обаятельны и пиздаты впрочем как и всегда! За вами бегают табуны лиц противоположенного пола. Ух, можете загулять мама не горюй.Стрельцы, сегодня просто красивы, обаятельны и пиздаты впрочем как и всегда! За вами бегают табуны лиц противоположенного пола. Ух, можете загулять мама не горюй.Стрельцы, сегодня просто красивы, обаятельны и пиздаты впрочем как и всегда! За вами бегают табуны лиц противоположенного пола. Ух, можете загулять мама не горюй."
+				android:layout_height="wrap_content" 
+				android:layout_width="wrap_content" 
+				android:layout_weight="1"
+				>
 			</TextView>
 
 			<LinearLayout android:id="@+id/linearLayout1"
-				android:layout_weight="1" android:layout_width="20sp"
-				android:layout_height="fill_parent" android:orientation="vertical">
+				android:layout_height="wrap_content" 
+				android:layout_width="fill_parent"
+				android:orientation="vertical" 
+				>
 				
 				<ImageView android:id="@+id/imgZnakZodiaka"
-					android:layout_width="100sp" android:layout_height="50sp"></ImageView>
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="2"
+					></ImageView>
 				 
-				<Button android:text="Назад" android:id="@+but/buttonReturnToMainPage"
-					android:layout_width="100sp" android:layout_height="50sp">
+				<Button 
+				android:text="Назад" 
+				android:id="@+but/buttonReturnToMainPage"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="2"
+					>
 				</Button>
 			</LinearLayout>
 		</LinearLayout>
