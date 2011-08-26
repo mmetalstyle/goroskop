@@ -26,7 +26,7 @@ import com.goroskop.ContactItem;
 public class Goroskop extends ListActivity implements OnClickListener {
 	public static int day; // 0 - сегодня, 1 - вчера, 2 - 2 дня назад
 	public static int znakId;
-	public static int znakImgId; 
+	public static int znakImgId;   
 	public static final int ID_G1 = 101;
     public static final int ID_G2 = 102;
     public static final int ID_G3 = 103;
